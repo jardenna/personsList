@@ -1,0 +1,25 @@
+﻿.table-content {
+    small {
+        display: block;
+    }
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+    th {
+        text-align: left;
+        padding: 0 1.5rem;
+    }
+
+    td {
+        border-bottom: 0.1rem solid $color-border;
+        padding: 1.2rem 1.5rem;
+
+    }
+
+
+}

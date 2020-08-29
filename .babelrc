@@ -1,0 +1,35 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@data": "./src/assets/data",
+        "@common": "./src/js/common",
+        "@components": "./src/js/components",
+        "@commonReact": "./src/js/components/common",
+        "@pages": "./src/js/components/pages",
+        "@hooks": "./src/js/hooks",
+        "@formElements": "./src/js/components/common/FormElements"
+      }
+    }],
+    "@babel/plugin-transform-runtime",
+    ["@babel/plugin-proposal-decorators", {
+      "legacy": true
+    }],
+    ["@babel/plugin-proposal-class-properties", {
+      "loose": true
+    }]
+  ],
+
+  "env": {
+    "production": {
+      "plugins": [
+        ["react-remove-properties", {
+          "properties": ["data-test"]
+        }]
+
+      ]
+    }
+  }
+}

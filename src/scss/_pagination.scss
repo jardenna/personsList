@@ -1,0 +1,99 @@
+﻿.pagination-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+
+    @include mQ($small) {
+        text-align: center;
+    }
+}
+
+.pagination-item {
+    display: inline-block;
+    text-align: center;
+
+    a {
+        padding: 8px 15px;
+        border: 1px solid $color-border;
+        border-right: none;
+        color: inherit;
+        display: block;
+        min-width: 48px;
+
+        @include mQ($small) {
+            padding: 3px 15px;
+            min-width: auto;
+        }
+
+        &:focus {
+            outline: var(--focus);
+
+        }
+
+        &.last-of-type {
+            border-right: 1px solid $color-border;
+        }
+
+        &.active {
+            background-color: $color-purple;
+            color: $color-white;
+
+            &:hover {
+                cursor: default;
+            }
+        }
+
+        &:hover {
+            background-color: $color-purple;
+            color: $color-white;
+
+            .chevron-right {
+                &:after {
+                    @include chevron($dir:right, $color:$color-white);
+                }
+            }
+
+            .chevron-left {
+                &:after {
+                    @include chevron($dir:left, $color:$color-white);
+                }
+            }
+
+            .chevron-last,
+            .chevron-first {
+                &:before {
+                    border-color: $color-white;
+                }
+            }
+
+        }
+    }
+
+
+    &.disabled {
+
+        .chevron-right {
+            &:after {
+                @include chevron($dir:right, $color:$color-border);
+            }
+        }
+
+        .chevron-left {
+            &:after {
+                @include chevron($dir:left, $color:$color-border);
+            }
+        }
+
+        .chevron-last,
+        .chevron-first {
+            &:before {
+                border-color: $color-border;
+            }
+        }
+
+        &:hover {
+            background-color: $color-white;
+        }
+    }
+}

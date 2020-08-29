@@ -1,0 +1,29 @@
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px white inset;
+}
+
+form {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+
+  color: $color-primary;
+  outline: none;
+  font-family: $font-primary;
+  background-color: transparent;
+  border: 0.1rem solid $color-border;
+  border-radius: .4rem;
+  box-shadow: none;
+  box-sizing: inherit;
+  height: 3.8rem;
+  padding: .6rem 1.0rem .7rem;
+  width: 100%;
+
+  &:focus {
+    background-color: $color-gray-lighter;
+  }
+}
