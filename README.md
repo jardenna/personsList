@@ -10,3 +10,6 @@ npm run build
 
 For development
 npm start
+
+
+The app runs at port 4000
